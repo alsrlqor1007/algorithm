@@ -10,3 +10,4 @@ Level 1 Index
 |   월간 코드 챌린지 시즌3    |  없는 숫자 더하기   |           [바로가기](https://programmers.co.kr/learn/courses/30/lessons/86051)           |
 |          연습문제           |  두 정수 사이의 합  |           [바로가기](https://programmers.co.kr/learn/courses/30/lessons/12912)           |
 |   월간 코드 챌린지 시즌1    | 두 개 뽑아서 더하기 |           [바로가기](https://programmers.co.kr/learn/courses/30/lessons/68644)           |
+|   월간 코드 챌린지 시즌2    | 약수의 개수와 덧셈  |           [바로가기](https://programmers.co.kr/learn/courses/30/lessons/77884)           |
