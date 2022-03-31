@@ -9,3 +9,4 @@ Level 2 Index
 |    연습문제    |     최댓값과 최솟값     | [바로가기](https://programmers.co.kr/learn/courses/30/lessons/12939) |
 | 탐욕법(Greedy) |        구명보트         | [바로가기](https://programmers.co.kr/learn/courses/30/lessons/42885) |
 | 탐욕법(Greedy) |      큰 수 만들기       | [바로가기](https://programmers.co.kr/learn/courses/30/lessons/42883) |
+|    완전탐색    |        소수 찾기        | [바로가기](https://programmers.co.kr/learn/courses/30/lessons/42839) |
