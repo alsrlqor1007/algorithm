@@ -1,14 +1,16 @@
-Level 1 Index
+## Level 1 Index
 
-|            분류             |        문제         |                                           링크                                           |
-| :-------------------------: | :-----------------: | :--------------------------------------------------------------------------------------: |
-|    월간 코드챌린지 시즌2    |     음양 더하기     |           [바로가기](https://programmers.co.kr/learn/courses/30/lessons/76501)           |
-| Summer/Winter Coding(~2018) |        예산         |           [바로가기](https://programmers.co.kr/learn/courses/30/lessons/12982)           |
-|            정렬             |       K번째수       |           [바로가기](https://programmers.co.kr/learn/courses/30/lessons/42748)           |
-|          연습문제           |      시저암호       |           [바로가기](https://programmers.co.kr/learn/courses/30/lessons/12926)           |
-|          연습문제           | 문자열 다루기 기본  | [바로가기](https://programmers.co.kr/learn/courses/30/lessons/12918?language=javascript) |
-|   월간 코드 챌린지 시즌3    |  없는 숫자 더하기   |           [바로가기](https://programmers.co.kr/learn/courses/30/lessons/86051)           |
-|          연습문제           |  두 정수 사이의 합  |           [바로가기](https://programmers.co.kr/learn/courses/30/lessons/12912)           |
-|   월간 코드 챌린지 시즌1    | 두 개 뽑아서 더하기 |           [바로가기](https://programmers.co.kr/learn/courses/30/lessons/68644)           |
-|   월간 코드 챌린지 시즌2    | 약수의 개수와 덧셈  |           [바로가기](https://programmers.co.kr/learn/courses/30/lessons/77884)           |
-|          연습문제           |      소수 찾기      |           [바로가기](https://programmers.co.kr/learn/courses/30/lessons/12921)           |
+|            분류             |        문제         |                                                                               파일 바로가기                                                                               |                                        프로그래머스 링크                                         |
+| :-------------------------: | :-----------------: | :-----------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------: |
+|    월간 코드챌린지 시즌2    |     음양 더하기     |             [바로가기](https://github.com/alsrlqor1007/algorithm/blob/main/programmers/javascript/level1/%EC%9D%8C%EC%96%91%20%EB%8D%94%ED%95%98%EA%B8%B0.js)             |           [웹에서 문제 보기](https://programmers.co.kr/learn/courses/30/lessons/76501)           |
+| Summer/Winter Coding(~2018) |        예산         |                            [바로가기](https://github.com/alsrlqor1007/algorithm/blob/main/programmers/javascript/level1/%EC%98%88%EC%82%B0.js)                            |           [웹에서 문제 보기](https://programmers.co.kr/learn/courses/30/lessons/12982)           |
+|            정렬             |       K번째수       |                       [바로가기](https://github.com/alsrlqor1007/algorithm/blob/main/programmers/javascript/level1/K%EB%B2%88%EC%A7%B8%EC%88%98.js)                       |           [웹에서 문제 보기](https://programmers.co.kr/learn/courses/30/lessons/42748)           |
+|          연습문제           |      시저암호       |                   [바로가기](https://github.com/alsrlqor1007/algorithm/blob/main/programmers/javascript/level1/%EC%8B%9C%EC%A0%80%EC%95%94%ED%98%B8.js)                   |           [웹에서 문제 보기](https://programmers.co.kr/learn/courses/30/lessons/12926)           |
+|          연습문제           | 문자열 다루기 기본  | [바로가기](https://github.com/alsrlqor1007/algorithm/blob/main/programmers/javascript/level1/%EB%AC%B8%EC%9E%90%EC%97%B4%EB%8B%A4%EB%A3%A8%EA%B8%B0%EA%B8%B0%EB%B3%B8.js) | [웹에서 문제 보기](https://programmers.co.kr/learn/courses/30/lessons/12918?language=javascript) |
+|   월간 코드 챌린지 시즌3    |  없는 숫자 더하기   |     [바로가기](https://github.com/alsrlqor1007/algorithm/blob/main/programmers/javascript/level1/%EC%97%86%EB%8A%94%EC%88%AB%EC%9E%90%EB%8D%94%ED%95%98%EA%B8%B0.js)      |           [웹에서 문제 보기](https://programmers.co.kr/learn/courses/30/lessons/86051)           |
+|          연습문제           |  두 정수 사이의 합  |     [바로가기](https://github.com/alsrlqor1007/algorithm/blob/main/programmers/javascript/level1/%EB%91%90%EC%A0%95%EC%88%98%EC%82%AC%EC%9D%B4%EC%9D%98%ED%95%A9.js)      |           [웹에서 문제 보기](https://programmers.co.kr/learn/courses/30/lessons/12912)           |
+|   월간 코드 챌린지 시즌1    | 두 개 뽑아서 더하기 | [바로가기](https://github.com/alsrlqor1007/algorithm/blob/main/programmers/javascript/level1/%EB%91%90%EA%B0%9C%EB%BD%91%EC%95%84%EC%84%9C%EB%8D%94%ED%95%98%EA%B8%B0.js) |           [웹에서 문제 보기](https://programmers.co.kr/learn/courses/30/lessons/68644)           |
+|   월간 코드 챌린지 시즌2    | 약수의 개수와 덧셈  | [바로가기](https://github.com/alsrlqor1007/algorithm/blob/main/programmers/javascript/level1/%EC%95%BD%EC%88%98%EC%9D%98%EA%B0%9C%EC%88%98%EC%99%80%EB%8D%A7%EC%85%88.js) |           [웹에서 문제 보기](https://programmers.co.kr/learn/courses/30/lessons/77884)           |
+|          연습문제           |      소수 찾기      |                   [바로가기](https://github.com/alsrlqor1007/algorithm/blob/main/programmers/javascript/level1/%EC%86%8C%EC%88%98%EC%B0%BE%EA%B8%B0.js)                   |           [웹에서 문제 보기](https://programmers.co.kr/learn/courses/30/lessons/12921)           |
+|          연슴문제           |     평균 구하기     |              [바로가기](https://github.com/alsrlqor1007/algorithm/blob/main/programmers/javascript/level1/%ED%8F%89%EA%B7%A0%EA%B5%AC%ED%95%98%EA%B8%B0.js)               |           [웹에서 문제 보기](https://programmers.co.kr/learn/courses/30/lessons/12944)           |
+|          연습문제           |     행렬의 덧셈     |              [바로가기](https://github.com/alsrlqor1007/algorithm/blob/main/programmers/javascript/level1/%ED%96%89%EB%A0%AC%EC%9D%98%EB%8D%A7%EC%85%88.js)               |           [웹에서 문제 보기](https://programmers.co.kr/learn/courses/30/lessons/12950)           |
