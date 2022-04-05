@@ -18,9 +18,12 @@ A process or set of steps to accomplish a certain task.
 5. 코드 보완 및 리팩토링하기
 ```
 
-<br/>
+<br><br/>
+
 ### Step 1: Understand The Problem
+
 문제를 마주했을 때, 아래 5가지를 고려할 수 있어야 한다.
+
 ```
 1. 문제를 나의 언어로 재정의할 수 있는가?
 2. 문제의 입력 값이 무엇인가? 어떻게 구성되어 있는가?
@@ -28,8 +31,10 @@ A process or set of steps to accomplish a certain task.
 4. 문제를 해결하기 위해 충분한 정보를 갖고 있는가? 그 정보만으로 입력 값에 대한 예상 결과 값을 도출할 수 있는가?
 5. 문제 속 중요한 자료들은 어떻게 관리해야 하는가? 문제에서 중요한 요소는 무엇이고, 어떻게 이름을 붙일 것인가?
 ```
+
 예시: 두 숫자의 합을 도출하는 함수를 작성하라.
 (Write a function which takes two numbers and returns their sum.)
+
 ```
 1. 재정의: 덧셈(Implement addition)
 2. 입력 값: 정수? 실수? string 형태?
@@ -38,11 +43,18 @@ A process or set of steps to accomplish a certain task.
 5. 변수: 함수명 add, 입력 값 num1, num2, 결과 값 sum
 ```
 
-<br/>
+<br><br/>
+
 ### Step 2: Concrete Examples
-<br/>
+
+<br><br/>
+
 ### Step 3: Break It Down
-<br/>
+
+<br><br/>
+
 ### Step 4: Solve Or Simplify
-<br/>
+
+<br><br/>
+
 ### Step 5: Look Back and Refactor
