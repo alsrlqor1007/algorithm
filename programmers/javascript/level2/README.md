@@ -1,4 +1,4 @@
-### Level 2 Index
+## Level 2 Index
 
 |            분류             |          문제           |                                                                               파일 바로가기                                                                               |                               프로그래머스 링크                               |
 | :-------------------------: | :---------------------: | :-----------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------: |
@@ -12,3 +12,4 @@
 |          완전탐색           |        소수 찾기        |                   [바로가기](https://github.com/alsrlqor1007/algorithm/blob/main/programmers/javascript/level2/%EC%86%8C%EC%88%98%EC%B0%BE%EA%B8%B0.js)                   | [웹에서 문제 보기](https://programmers.co.kr/learn/courses/30/lessons/42839)  |
 |            정렬             |       가장 큰 수        |                   [바로가기](https://github.com/alsrlqor1007/algorithm/blob/main/programmers/javascript/level2/%EA%B0%80%EC%9E%A5%ED%81%B0%EC%88%98.js)                   | [웹에서 문제 보기](https://programmers.co.kr/learn/courses/30/lessons/42746)  |
 | Summer/Winter Coding(~2018) |        스킬트리         |                   [바로가기](https://github.com/alsrlqor1007/algorithm/blob/main/programmers/javascript/level2/%EC%8A%A4%ED%82%AC%ED%8A%B8%EB%A6%AC.js)                   | [웹에서 문제 보기](https://programmers.co.kr/learn/courses/30/lessons/49993#) |
+|          연습문제           |       올바른 괄호       |              [바로가기](https://github.com/alsrlqor1007/algorithm/blob/main/programmers/javascript/level2/%EC%98%AC%EB%B0%94%EB%A5%B8%EA%B4%84%ED%98%B8.js)               | [웹에서 문제 보기](https://programmers.co.kr/learn/courses/30/lessons/12909)  |
