@@ -47,6 +47,50 @@ A process or set of steps to accomplish a certain task.
 
 ### Step 2: Concrete Examples
 
+구체적인 예시를 통해 문제를 더욱 명확히 이해할 수 있고, 도출한 최종 솔루션을 검증할 수 있는 수단이 된다. 입력 값을 알고 있으니 그에 따른 올바른 결과가 도출되는지 확인할 수 있는 것이다.
+단순히 문제를 더 잘 이해하고 해결하는 것보다도 실무에서 이를 활용한 이점들이 있다. 만약에 인스타그램과 같은 서비스에서 새로운 기능을 개발한다면 이미 주어져 있는 입력 값이라고 할 수 있는 `User Stories` 고려부터 시작한다. User Action을 알고 있으니 그에 따라 다음 어떤 결과가 나와야 하는지 고민하는 것이다.
+`Unit test`도 예시를 활용하는 사례이다. 정해진 입력 값에 어떤 결과가 나와야 하는지 테스트하면서 개발한다.
+
+아래의 순서로 예시를 활용한다.
+
+```
+1. 간단한 예시부터 세운다.
+2. 조금 더 복잡한 예시를 세운다.
+3. 빈 입력 값으로 앞에서 세운 예시를 확인한다. 로직이 어떻게 돌아가는지 인사이트를 얻을 수 있다.
+4. 잘못된 입력 값으로 앞에서 세운 예시를 확인한다.
+```
+
+예시: 문자열을 받으면 각 문자의 갯수를 반환하는 함수를 작성하라.
+(Write a function which takes in a string and returns counts of each character in the string.)
+
+1. 간단한 예시
+
+```JSX
+charCount("aaaa"); // {a: 4}
+charCount("hello"); // {h: 1, e: 1, l: 2, o: 1}
+```
+
+2. 더 복잡한 예시
+
+```JSX
+"my phone number is 182763"
+"Hello hi"
+// 이러한 더 복잡한 예시들은 문제를 본격적으로 풀기 전에 문제를 더 잘 이해하는데 도움이 된다.
+```
+
+3. 빈 입력 값
+
+```JSX
+charCount("");
+// 빈 값을 넣으면 빈 문자열이 나와야 하는가? 아니면 null, falsy, undefined 또는 에러가 나와야 하는가?
+```
+
+4. 잘못된 입력 값
+
+```JSX
+charCount(5); // 문자열이 아닌 다른 타입의 데이터가 들어갈 경우(edge case 고려하기)
+```
+
 <br><br/>
 
 ### Step 3: Break It Down
