@@ -19,7 +19,7 @@ Data structures are collections of values, the relationships among them, and the
 
 #### 그렇다면 가장 좋은 자료구조라는 것이 있을까?
 
-There is no one "BEST" data structure. They each have specific talents. They all excel in different situations.
+There is no one "BEST" data structure. They each have specific talents. They all excel in different situations.  
 각 자료구조들은 저마다의 역할과 장점이 있기 때문에 특정 자료구조가 가장 좋다라고 할 수 없다.
 예를 들어, 지도나 위치 정보를 가지고 일을 한다고 가정해보자. 주변에 가장 가깝거나 가장 저렴한 주유소를 찾는다고 할 때는 `그래프`를 활용하는 것이 제일 좋을 것이다. 그래프 구조를 이용해서 특정 지점 사이 최단거리를 구할 수 있다. 단순히 배열만으로는 도출하기 상당히 어려운 예시이다.
 만약 정해진 순서가 있으면서 앞뒤로 데이터의 삽입과 삭제가 빠르게 이루어져야 하는 경우라면 어떨까. 앞의 섹션에서 배운대로 배열에서는 인덱스 번호를 새로 부여하기 때문에 효과적이라고 할 수는 없다. 특히 규모가 큰 경우는 더욱 더 그렇다. 이 경우에는 `연결 구조(Linked List)`를 활용하는 것이 좋다.
