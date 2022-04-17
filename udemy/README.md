@@ -11,7 +11,7 @@ By. Colt Steele, [Udemy Link](https://www.udemy.com/course/js-algorithms-and-dat
 |      1      |                  Introduction                  |                                                                                                                                |
 |      2      |                 Big O Notation                 |                  [바로가기](https://github.com/alsrlqor1007/algorithm/blob/main/udemy/Big%20O%20Notation.md)                   |
 |      3      |  Analyzing Performance of Arrays and Objects   | [바로가기](https://github.com/alsrlqor1007/algorithm/blob/main/udemy/Analyzing%20Performance%20of%20Arrays%20and%20Objects.md) |
-|      4      |            Problem Solving Approach            |                                                            바로가기                                                            |
+|      4      |            Problem Solving Approach            |             [바로가기](https://github.com/alsrlqor1007/algorithm/blob/main/udemy/Problem%20Solving%20Approach.md)              |
 |      5      |            Problem Solving Patterns            |                                                            바로가기                                                            |
 |      6      |                   Challenges                   |                                                            바로가기                                                            |
 |      7      |                   Recursion                    |                                                            바로가기                                                            |
@@ -26,7 +26,7 @@ By. Colt Steele, [Udemy Link](https://www.udemy.com/course/js-algorithms-and-dat
 |     16      |                   Quick Sort                   |                                                            바로가기                                                            |
 |     17      |                   Radix Sort                   |                                                            바로가기                                                            |
 |     18      |          Data Structures Introduction          |           [바로가기](https://github.com/alsrlqor1007/algorithm/blob/main/udemy/Data%20Structures%20Introduction.md)            |
-|     19      |              Singly Linked Lists               |                                                            바로가기                                                            |
+|     19      |              Singly Linked Lists               |                [바로가기](https://github.com/alsrlqor1007/algorithm/blob/main/udemy/Singly%20Linked%20Lists.md)                |
 |     20      |              Doubly Linked Lists               |                                                            바로가기                                                            |
 |     21      |                Stacks + Queues                 |                                                            바로가기                                                            |
 |     22      |              Binary Search Trees               |                                                            바로가기                                                            |
