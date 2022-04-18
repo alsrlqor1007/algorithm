@@ -21,7 +21,7 @@ A data structure that contains a head, tail and length property. Linked Lists co
 연결 리스트를 사용하는 가장 주된 이유 중 하나는 매우 긴 데이터 또는 많은 내용을 담고 있는 자료형에서 요소의 삽입과 삭제가 매우 중요한 작업을 해야 한다면, 그리고 특정 요소로 접근할 필요가 없이 데이터를 저장하기만 한다면 연결 리스트가 유용할 것이다.
 <br></br>
 
-### Starter Code and Push Intro
+### Starter Code and Push
 
 ```JSX
 // piece of data: val
@@ -41,6 +41,19 @@ first.next.next.next = new Node("are")
 first.next.next.next.next = new Node("you")
 ```
 
+연결 리스트는 항상 끝 요소에 대한 정보를 갖고 있기 때문에 데이터의 길이나 크기에 상관없이 끝에 추가하는 작업은 쉽게 가능하다. 추가 후 기존 Tail 노드에서 포인터만 만들어주고 Tail 정보만 수정하면 된다.
+
+- Push 작업 수도 코드
+
+```
+- 값을 받는 함수여야 한다.
+- 함수의 인자로 새로운 노드를 생성해야 한다.
+- Head가 없다면 만들어주고 그 다음 새로운 노드가 Tail이 된다.
+- Head가 있다면 Tail에 새로운 노드를 만들어주고 연결 리스트의 Tail 정보를 수정한다.
+- Length를 1 증가시킨다.
+- 최종 연결 리스트를 반환한다.
+```
+
 ```JSX
 class SinglyLinkedList {
     contructor() {
@@ -49,7 +62,16 @@ class SinglyLinkedList {
         this.length = 0;
     }
     push(val) {
-
+        var newNode = new Node(val);
+        if (!this.head) { // 비어있을 때만 작동한다.
+            this.head = newNode;
+            this.tail = this.head;
+        } else {
+            this.tail.next = newNode;
+            this.tail = newNode;
+        }
+        this.length++;
+        return this;
     }
 }
 
@@ -59,16 +81,65 @@ list.push("HELLO")
 list.push("GOODBYE")
 ```
 
-연결 리스트는 항상 끝 요소에 대한 정보를 갖고 있기 때문에 데이터의 길이나 크기에 상관없이 끝에 추가하는 작업은 쉽게 가능하다. 추가 후 기존 Tail 노드에서 포인터만 만들어주고 Tail 정보만 수정하면 된다.
+<br></br>
 
-- Push 수도 코드
+### Pop
+
+Removing a node from the end of the Linked List.
+
+연결 리스트의 꼬리 노드 하나를 삭제한다. 항상 Tail 정보를 갖고 있기 때문에 삭제해주는 것은 간단하지만, 삭제한 후 새로운 Tail 노드를 지정해주어야 하기 때문에 처음부터 Tail 노드 작전 노드까지 거슬러 올라가야 한다. Tail에서 노드 하나 앞으로 조회하는 법은 없기 때문이다.
+
+예를 들어, 아래와 같은 방식(traverse)으로 Head부터 이동하기 시작해 노드를 찾는다고 할 수 있다.
+
+```JSX
+class SinglyLinkedList {
+    contructor() {
+        this.head = null;
+        this.tail = null;
+        this.length = 0;
+    }
+    push(val) {
+        var newNode = new Node(val);
+        if (!this.head) {
+            this.head = newNode;
+            this.tail = this.head;
+        } else {
+            this.tail.next = newNode;
+            this.tail = newNode;
+        }
+        this.length++;
+        return this;
+    }
+    traverse() {
+        var current = this.head;
+        while (current) {
+            console.log(current.val);
+            current = current.next;
+        }
+    }
+}
+
+var list = new SinglyLinkedList()
+list.push("HELLO")
+list.push("GOODBYE")
+list.push("!")
+
+list.traverse()
+// HELLO
+// GOODBYE
+// !
+// undefined
+```
+
+- Pop 작업 수도 코드
 
 ```
-- 값을 받는 함수여야 한다.
-- 함수의 인자로 새로운 노드를 생성해야 한다.
-- Head가 없다면 만들어주고 그 다음 새로운 노드가 Tail이 된다.
-- Head가 있다면 Tail에 새로운 노드를 만들어주고 연결 리스트의 Tail 정보를 수정한다.
-- Length를 1 증가시킨다.
+- 리스트에 노드가 존재하지 않는다면 undefined를 반환한다.
+- Tail에 닿을 때까지 리스트를 순회한다.
+- 뒤에서 두 번째 노드의 다음 속성을 null로 지정한다.
+- 뒤에서 두 번째 노드를 Tail로 지정한다.
+- Length를 1 차감한다.
+- 삭제된 노드 값을 반환한다.
 ```
 
 ...
