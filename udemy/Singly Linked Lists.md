@@ -54,6 +54,8 @@ first.next.next.next.next = new Node("you")
 - 최종 연결 리스트를 반환한다.
 ```
 
+- Push 작업 실제 코드
+
 ```JSX
 class SinglyLinkedList {
     contructor() {
@@ -141,5 +143,102 @@ list.traverse()
 - Length를 1 차감한다.
 - 삭제된 노드 값을 반환한다.
 ```
+
+- Pop 작업 실제 코드
+
+```JSX
+class SinglyLinkedList {
+    contructor() {
+        this.head = null;
+        this.tail = null;
+        this.length = 0;
+    }
+    push(val) {
+        var newNode = new Node(val);
+        if (!this.head) {
+            this.head = newNode;
+            this.tail = this.head;
+        } else {
+            this.tail.next = newNode;
+            this.tail = newNode;
+        }
+        this.length++;
+        return this;
+    }
+    pop(val) {
+        if (!this.head) return undefined;
+        var current = this.head;
+        var newTail = current;
+        while (current.next) {
+            newTail = current;
+            current = current.next;
+        }
+        console.log(current.val);
+        console.log(newTail.val);
+
+        this.tail = newTail;
+        this.tail.next = null;
+        this.length--;
+        if (this.length === 0) {
+            this.head = null;
+            this.tail = null;
+        }
+        return current;
+    }
+}
+
+var list = new SinglyLinkedList();
+list.push("HELLO");
+list.push("GOODBYE");
+list.push("!");
+
+list.pop();
+// pop 메서드 내 console.log 출력 값
+console.log(current.val); // !
+console.log(newTail.val); // GOODBYE
+```
+
+<br></br>
+
+### Shifting
+
+Removing a new node from the beginning of the Linked List!
+연결 리스트의 가장 앞에 있는 요소를 삭제하는 작업이다. 최종적으로 삭제한 요소를 빈환할 예정이기 때문에 변수에 저장해두고, 삭제 후 두 번째에 위치해 있던 요소를 Head로 지정해준다.
+
+- Shifting 작업 수도 코드
+
+```
+- 연결 리스트에 아무 요소도 존재하지 않는다면 undefined를 반환한다.
+- 삭제 전 Head 요소를 변수에 할당한다.
+- Head 요소 다음의 요소를 Head로 지정한다.
+- Length 1 차감한다.
+- 삭제한 요소를 반환한다.
+```
+
+- Shifting 작업 실제 코드
+
+```JSX
+class SinglyLinkedList {
+    contructor() {
+        this.head = null;
+        this.tail = null;
+        this.length = 0;
+    }
+    shift() {
+        if (!this.head) return undefined;
+        var currentHead = this.head;
+        this.head = currentHead.next;
+        this.length--;
+        if (this.length === 0) {
+            this.tail = null;
+        }
+        return currentHead;
+    }
+}
+```
+
+<br></br>
+
+### Unshifting
 
 ...
