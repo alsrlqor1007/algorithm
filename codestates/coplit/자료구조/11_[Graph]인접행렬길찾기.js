@@ -62,12 +62,12 @@ function getDirections(matrix, from, to) {
         // 해당 정점의 간선들을 확인합니다.
         for (let next = 0; next < matrix[now].length; next++) {
         // 만약, 간선이 있고 방문하지 않았다면
-        if (matrix[now][next] && !isVisited[next]){
-            // queue에 next를 넣습니다. (다음 정점으로 가기 위해)
-            enqueue(next);
-            // 해당 정점을 방문했다는 것을 표시합니다.
-            isVisited[next] = true
-        }
+            if (matrix[now][next] && !isVisited[next]){
+                // queue에 next를 넣습니다. (다음 정점으로 가기 위해)
+                enqueue(next);
+                // 해당 정점을 방문했다는 것을 표시합니다.
+                isVisited[next] = true
+            }
         }
         
     }
