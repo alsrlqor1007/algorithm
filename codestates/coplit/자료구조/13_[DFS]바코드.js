@@ -11,7 +11,7 @@ function barcode(len) {
             if (reversed.slice(0, i) === reversed.slice(i, i + i)) {
                 // 동일하면 false 반환
                 return false;
-        }
+            }
         }
 
         // 끝까지 인접해 있는 부분 수열이 동일한 경우가 없으면 true 반환
