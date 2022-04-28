@@ -7,14 +7,14 @@ a와 b는 -10,000,000 이상 10,000,000 이하인 정수입니다.
 a와 b의 대소관계는 정해져있지 않습니다.
 */
 
-function solution(a, b) {
+function solution(a, b) { 
     let answer = 0;
     for (let i = Math.min(a, b); i <= Math.max(a, b); i++) {
         answer += i;
     }
-    return answer;
+    return answer
 }
-
+?
 // 시간 복잡도: O(n)
 
 
