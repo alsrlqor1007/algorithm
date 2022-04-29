@@ -14,7 +14,6 @@ function solution(a, b) {
     }
     return answer
 }
-?
 // 시간 복잡도: O(n)
 
 
