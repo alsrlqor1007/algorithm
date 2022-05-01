@@ -45,7 +45,7 @@ first.next.next.next.next = new Node("you")
 
 - Push 작업 수도 코드
 
-```
+```ㅊㅋ
 - 값을 받는 함수여야 한다.
 - 함수의 인자로 새로운 노드를 생성해야 한다.
 - Head가 없다면 만들어주고 그 다음 새로운 노드가 Tail이 된다.
@@ -202,7 +202,8 @@ console.log(newTail.val); // GOODBYE
 
 ### Shifting
 
-Removing a new node from the beginning of the Linked List!
+Removing a new node from the beginning of the Linked List.
+
 연결 리스트의 가장 앞에 있는 요소를 삭제하는 작업이다. 최종적으로 삭제한 요소를 빈환할 예정이기 때문에 변수에 저장해두고, 삭제 후 두 번째에 위치해 있던 요소를 Head로 지정해준다.
 
 - Shifting 작업 수도 코드
@@ -241,4 +242,80 @@ class SinglyLinkedList {
 
 ### Unshifting
 
-...
+Adding a new node to the beginning of the Linked List.
+
+push와 다른 것은 리스트의 앞 부분에 삽입한다는 것이다. 우리는 이미 Head 정보를 갖고 있기 때문에 새로운 Head를 선언해주고 기존 Head를 가르키도록 포인터를 추가해주면 된다.
+
+- Unshifting 작업 수도 코드
+
+```
+- 값을 인자로 받는다.
+- 인자롭 받은 값으로 새로운 노드를 생성한다.
+- 리스트에 Head가 없는 경우라면 Head로 지정하고 새로 생성된 노드를 Tail로 지정한다.
+- 그렇지 않다면 새로 생성된 노드의 다음 노드를 기존 Head 노드로 지정한다.
+- 새로 생성된 노드를 새 Head로 지정한다.
+- Length를 1 증가시킨다.
+- 연결 리스트를 반환한다.
+```
+
+- Unshifting 작업 실제 코드
+
+```JSX
+class SinglyLinkedList {
+    contructor() {
+        this.head = null;
+        this.tail = null;
+        this.length = 0;
+    }
+    unshift(val) {
+        var newNode = new Node(val);
+        if (!this.head) {
+            this.head = newNode;
+            this.tail = this.head;
+        } else {
+            newNode.next = this.head;
+            this.head = newNode;
+        }
+        this.length++;
+        return this;
+    }
+}
+```
+
+<br></br>
+
+### Get
+
+Retrieving a node by it's position in the Linked List.
+
+특정 인덱스 번호를 받으면 해당 위치의 요소를 조회하는 것이다. 0을 받으면 Head를 반환하고, 4를 받으면 5번째 요소 값을 반환한다. 하지만 여기서 중요한 것은, 받은 수만큼 리스트를 거쳐서 가야 한다는 것이다. 각 요소가 인덱스 값을 갖고 있지 않기 때문에 처음(0)부터 세면서 찾고자 하는 위치를 찾아야 한다.
+
+- Get 작업 수도 코드
+
+```
+- 값을 인자로 받는다.
+- 찾고자 하는 인덱스 번호가 0 이하거나, 또는 리스트의 길이와 같거나 더 크다면 null을 반환한다.
+- 찾고자 하는 인덱스 번호까지 리스트를 순회하고 해당 인덱스 번호의 노드를 반환한다.
+```
+
+- Get 작업 실제 코드
+
+```JSX
+class SinglyLinkedList {
+    contructor() {
+        this.head = null;
+        this.tail = null;
+        this.length = 0;
+    }
+    get(index) {
+        if (index < 0 || index >= this.length) return null;
+        var counter = 0;
+        var current = this.head;
+        while (counter !== index) {
+            current = current.next;
+            counter++;
+        }
+        return current;
+    }
+}
+```
