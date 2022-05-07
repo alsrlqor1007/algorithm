@@ -319,3 +319,52 @@ class SinglyLinkedList {
     }
 }
 ```
+
+<br></br>
+
+### Set
+
+Changing the value of a node based on it's position in the Linked List.
+
+Set은 두 가지 인자를 받는다. 위치나 인덱스 번호와 해당 위치에 변경할 새로운 값이다.
+
+- Set 작업 수도 코드
+
+```
+- 값과 인덱스 번호를 인자로 받는다.
+- get 함수를 이용해서 인덱스 번호에 해당하는 노드를 찾는다.
+- 찾고자 하는 노드가 존재하지 않을 경우, false를 반환한다.
+- 존재할 경우, 해당 노드의 값을 인자로 받은 값으로 대체하고 true를 반환한다.
+```
+
+- Set 작업 실제 코드
+
+```JSX
+class SinglyLinkedList {
+    contructor() {
+        this.head = null;
+        this.tail = null;
+        this.length = 0;
+    }
+    get(index) {
+        if (index < 0 || index >= this.length) return null;
+        var counter = 0;
+        var current = this.head;
+        while (counter !== index) {
+            current = current.next;
+            counter++;
+        }
+        return current;
+    }
+    set(index, val) {
+        var foundNode = this.get(index);
+        if (foundNode) {
+            foundNode.val = val;
+            return true;
+        }
+        return false;
+    }
+}
+```
+
+...
