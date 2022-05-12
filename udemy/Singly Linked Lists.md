@@ -373,7 +373,7 @@ class SinglyLinkedList {
 
 Adding a node to the Linked List at a specific position.
 
-이미 존재하는 기존의 노를 갱신하는 것이 아니라 위치가 어디든 새로운 노드를 삽입하는 것이다.
+이미 존재하는 기존의 노드의 정보를 갱신하는 것이 아니라 위치가 어디든 연결 리스트에 새로운 노드를 삽입하는 것이다.
 
 - Insert 작업 수도 코드
 
