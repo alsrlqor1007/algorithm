@@ -367,4 +367,82 @@ class SinglyLinkedList {
 }
 ```
 
+<br></br>
+
+### Insert
+
+Adding a node to the Linked List at a specific position.
+
+이미 존재하는 기존의 노를 갱신하는 것이 아니라 위치가 어디든 새로운 노드를 삽입하는 것이다.
+
+- Insert 작업 수도 코드
+
+```
+- 인덱스 번호가 0보다 작거나 연결 리스트의 전체 길이보다 크다면 false를 반환한다.
+- 인덱스 번호가 전체 길이와 같다면 가장 끝에 새로운 노드를 추가한다.
+- 인덱스 번호가 0이라면 가장 앞에 새로운 노드를 추가한다.(Unshift)
+- 위 경우에 모두 해당되지 않는다면 get 로직을 활용해 -1번째 인덱스의 노드에 접근한다.
+- 새로운 노드를 접근한 노드의 다음 노드로 지정한다.
+- Length 증가시킨다.
+- true를 반환한다.
+```
+
+- Insert 작업 실제 코드
+
+```JSX
+class SinglyLinkedList {
+    contructor() {
+        this.head = null;
+        this.tail = null;
+        this.length = 0;
+    }
+    get(index) {
+        if (index < 0 || index >= this.length) return null;
+        var counter = 0;
+        var current = this.head;
+        while (counter !== index) {
+            current = current.next;
+            counter++;
+        }
+        return current;
+    }
+    push(val) {
+        var newNode = new Node(val);
+        if (!this.head) {
+            this.head = newNode;
+            this.tail = this.head;
+        } else {
+            this.tail.next = newNode;
+            this.tail = newNode;
+        }
+        this.length++;
+        return this;
+    }
+    unshift(val) {
+        var newNode = new Node(val);
+        if (!this.head) {
+            this.head = newNode;
+            this.tail = this.head;
+        } else {
+            newNode.next = this.head;
+            this.head = newNode;
+        }
+        this.length++;
+        return this;
+    }
+    insert(index, val) {
+        if (index < 0 || index > this.length) return false;
+        if (index === this.length) return this.push(val);
+        if (index === 0) this.unshift(val);
+        var newNode = new Node(val);
+        var prev = this.get(index - 1);
+        var temp = prev.next;
+        prev.next = newNode;
+        newNode.next = temp;
+        this.length++;
+        return true;
+    }
+}
+```
+
 ...
