@@ -445,4 +445,107 @@ class SinglyLinkedList {
 }
 ```
 
+<br></br>
+
+### Remove
+
+Removing a node from the Linked List at a specific position.
+
+인덱스 번호를 받아 해당 인덱스의 요소 값을 삭제하고 채우는 함수이다. 첫 부분을 삭제한다면 가장 앞 요소를 삭제하고, 가장 마지막 부문을 삭제한다면 가장 마지막 요소를 삭제한다. 중간에 어느 값을 삭제하고자 한다면 이보다는 조금 더 복잡하다.
+
+- Remove 작업 수도 코드
+
+```
+- 인덱스 값이 0보다 작거나 전체 길이보다 크다면 undefined를 반환한다.
+- 인덱스 값이 '전체 길이 - 1'과 같다면 pop을 수행한다.
+- 인덱스 값이 0이라면 shift를 수행한다.
+- 위에 모두 해당되지 않으면 get으로 '인덱스 값 - 1'의 위치에 접근한다.
+- 해당 노드의 다음 노드를 다다음 노드로 지정한다.
+- 전체 길이를 줄인다.
+- 삭제한 노드의 값을 반환한다.
+```
+
+- Remove 작업 실제 코드
+
+```JSX
+class SinglyLinkedList {
+    contructor() {
+        this.head = null;
+        this.tail = null;
+        this.length = 0;
+    }
+    get(index) {
+        if (index < 0 || index >= this.length) return null;
+        var counter = 0;
+        var current = this.head;
+        while (counter !== index) {
+            current = current.next;
+            counter++;
+        }
+        return current;
+    }
+    pop(val) {
+        if (!this.head) return undefined;
+        var current = this.head;
+        var newTail = current;
+        while (current.next) {
+            newTail = current;
+            current = current.next;
+        }
+        console.log(current.val);
+        console.log(newTail.val);
+
+        this.tail = newTail;
+        this.tail.next = null;
+        this.length--;
+        if (this.length === 0) {
+            this.head = null;
+            this.tail = null;
+        }
+        return current;
+    }
+    shift() {
+        if (!this.head) return undefined;
+        var currentHead = this.head;
+        this.head = currentHead.next;
+        this.length--;
+        if (this.length === 0) {
+            this.tail = null;
+        }
+        return currentHead;
+    }
+    remove(index) {
+        if (index < 0 || index >= this.length) return undefined;
+        if (index === 0) return this.shift();
+        if (index === this.length - 1) return this.pop();
+        var previousNode = this.get(index - 1);
+        var removed = previousNode.next;
+        previousNode.next = removed.next;
+
+        return removed;
+    }
+}
+```
+
+<br></br>
+
+### Reverse
+
+Reversing the Linked List in place.
+
+연결 리스트를 뒤집는 것이다.
+
+- Reverse 작업 수도 코드
+
+```
+- Head와 Tail을 바꾼다.
+- next와 prev라는 변수를 선언한다.
+- node라는 변수를 선언하고 Head 요소를 초기에 할당한다.
+- 리스트를 순회한다.
+- next 변수에 다음 속성을 할당한다.
+- node 변수에 다음 속성을 할당한다.
+- prev 변수에 node 변수 값을 할당한다.
+- node 변수에 next 변수 값을 할당한다.
+```
+
 ...
