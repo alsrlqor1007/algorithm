@@ -548,4 +548,53 @@ Reversing the Linked List in place.
 - node 변수에 next 변수 값을 할당한다.
 ```
 
-...
+- Reverse 작업 실제 코드
+
+```JSX
+class SinglyLinkedList {
+    contructor() {
+        this.head = null;
+        this.tail = null;
+        this.length = 0;
+    }
+    reverse() {
+        var node = this.head;
+        this.head = this.tail;
+        this.tail = node;
+        var next;
+        var prev = null;
+
+        for (var = i; i < this.length; i++) {
+            next = node.next;
+            node.next = prev;
+            prev = node;
+            node = next;
+        }
+        return this;
+    }
+    // 배열 형태로 연결 리스트 요소들을 console.log로 출력한다.
+    print() {
+        var arr = [];
+        var current = this.head;
+        while (current) {
+            arr.push(current.val);
+            current = current.next;
+        }
+        console.log(arr);
+    }
+}
+```
+
+<br></br>
+
+### Big O Notation of Singly Linked List
+
+- Insertion: O(1)
+- Removal: O(1) or O(N)
+- Searching: O(N)
+- Access: O(N)
+
+삽입 작업은 O(1)의 시간 복잡도를 가진다. 가장 마지막에 새로운 노드를 추가해주고 Tail을 새롭게 지정해주었다. 서두에 삽입한다면 새로운 노드를 생성한 후 Head로 지정했다. 어느 위치더라도 새로운 노드 삽입 작업은 동일하게 소요된다. 하지만 배열일 경우 그렇지 않다. 삽입 후 모든 요소의 인덱스 번호를 변경해줘야 하기 때문에 더 많은 작업이 필요하다. 따라서 삽입하는 데에 있어서는 연결 리스트가 더 빠르다고 할 수 있다.
+삭제 작업은 삭제할 노드의 위치에 따라 시간 복잡도가 다르다. 서두에 위치한 노드를 삭제한다면 O(1)으로 간단하다. Head 노드 다음에 위치한 노드를 새로운 Head로 지정한다. 하지만 마지막에 위치한 노드를 삭제할 때는 조금 더 복잡하다. 마지막 Tail 노드의 직전 노드를 찾아야 하기 때문에 연결 리스트 전체를 순회해야 하기 때문이다.
+탐색은 특정 노드를 찾는 작업이다. 따라서 연결 리스트의 크기 또는 찾고자 하는 노드의 위치에 따라 복잡도는 증가한다. 배열과 비교하면 배열은 인덱스 번호가 존재하기 때문에 인덱스 번호에 해당하는 요소를 바로 찾을 수 있어 배열이 더 빠르다.
+정리하자면 삽입과 서두 요소 삭제 작업이 주로 필요한 자료에서는 배열보다 연결 리스트가 더 유용하지만, 특정 요소를 탐색하거나 접근할 때는 내장된 인덱스 번호가 존재하는 배열이 더 효율적이다.
