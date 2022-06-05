@@ -58,4 +58,49 @@ function someRecursive(arr, callback){
 }
 ```
 
-...
+<br></br>
+
+### flatten
+
+배열을 입력 받아 내부 배열을 푼 하나의 배열로 반환하는 재귀함수 구현
+
+```JSX
+function flatten(arr){
+  // add whatever parameters you deem necessary - good luck!
+    let result = [];
+    for (let i = 0; i < arr.length; i++) {
+        if (Array.isArray(arr[i])) {
+            result = result.concat(flatten(arr[i]));
+        } else {
+            result.push(arr[i]);
+        }
+    }
+
+    return result;
+}
+
+// flatten([1, 2, 3, [4, 5] ]) // [1, 2, 3, 4, 5]
+// flatten([1, [2, [3, 4], [[5]]]]) // [1, 2, 3, 4, 5]
+// flatten([[1],[2],[3]]) // [1,2,3]
+// flatten([[[[1], [[[2]]], [[[[[[[3]]]]]]]]]]) // [1,2,3]
+```
+
+<br></br>
+
+### capitalizeFirst
+
+<br></br>
+
+### nestedEvenSum
+
+<br></br>
+
+### capitalizeWords
+
+<br></br>
+
+### stringifyNumbers
+
+<br></br>
+
+### collectStrings
