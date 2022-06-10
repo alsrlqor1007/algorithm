@@ -51,7 +51,7 @@ function isPalindrome(str){
 // someRecursive([4,6,8], val => val > 10); // false
 
 function someRecursive(arr, callback){
-  // add whatever parameters you deem necessary - good luck!
+    // add whatever parameters you deem necessary - good luck!
     if (arr.length === 0) return false;
     if (callback(arr[0])) return true;
     return someRecursive(arr.slice(1), callback);
@@ -66,7 +66,7 @@ function someRecursive(arr, callback){
 
 ```JSX
 function flatten(arr){
-  // add whatever parameters you deem necessary - good luck!
+    // add whatever parameters you deem necessary - good luck!
     let result = [];
     for (let i = 0; i < arr.length; i++) {
         if (Array.isArray(arr[i])) {
@@ -88,6 +88,18 @@ function flatten(arr){
 <br></br>
 
 ### capitalizeFirst
+
+배열 내 각 요소의 첫 글자를 대문자로 바꿔서 다시 배열을 반환하는 재귀함수 구현
+
+```JSX
+function capitalizeFirst (arr) {
+    // add whatever parameters you deem necessary - good luck!
+    if (arr.length === 1) return [arr[0][0].toUpperCase() + arr[0].slice(1)];
+    else return capitalizeFirst(arr.slice(0, 1)).concat(capitalizeFirst(arr.slice(1)));
+}
+
+// capitalizeFirst(['car','taco','banana']); // ['Car','Taco','Banana']
+```
 
 <br></br>
 
