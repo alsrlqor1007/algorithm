@@ -99,20 +99,199 @@ function capitalizeFirst (arr) {
 }
 
 // capitalizeFirst(['car','taco','banana']); // ['Car','Taco','Banana']
+
+
+// reference
+function capitalizeFirst (array) {
+    if (array.length === 1) {
+        return [array[0][0].toUpperCase() + array[0].substr(1)];
+    }
+    const res = capitalizeFirst(array.slice(0, -1));
+    const string = array.slice(array.length - 1)[0][0].toUpperCase() + array.slice(array.length-1)[0].substr(1);
+    res.push(string);
+    return res;
+}
 ```
 
 <br></br>
 
 ### nestedEvenSum
 
+객체를 받아 중첩되어 있는 객체 안에 있는 모든 짝수의 합을 반환하는 재귀함수 구현
+
+```JSX
+function nestedEvenSum (obj) {
+  // add whatever parameters you deem necessary - good luck!
+  let sum = 0;
+  for (let key in obj) {
+      if (typeof obj[key] === 'object') {
+          sum += nestedEvenSum(obj[key]);
+      } else if (typeof obj[key] === 'number' && obj[key] % 2 === 0) {
+          sum += obj[key];
+      }
+  }
+  return sum;
+}
+
+
+var obj1 = {
+  outer: 2,
+  obj: {
+    inner: 2,
+    otherObj: {
+      superInner: 2,
+      notANumber: true,
+      alsoNotANumber: "yup"
+    }
+  }
+}
+
+var obj2 = {
+  a: 2,
+  b: {b: 2, bb: {b: 3, bb: {b: 2}}},
+  c: {c: {c: 2}, cc: 'ball', ccc: 5},
+  d: 1,
+  e: {e: {e: 2}, ee: 'car'}
+};
+
+nestedEvenSum(obj1); // 6
+nestedEvenSum(obj2); // 10
+```
+
 <br></br>
 
 ### capitalizeWords
+
+단어들을 요소로 갖는 배열을 입력 받아 대문자로 변환하여 반환하는 재귀함수 구현
+
+```JSX
+function capitalizeWords (arr) {
+  // add whatever parameters you deem necessary - good luck!
+  if (arr.length === 1) return [arr[0].toUpperCase()];
+  else return capitalizeWords(arr.slice(0, 1)).concat(capitalizeWords(arr.slice(1)));
+}
+
+// let words = ['i', 'am', 'learning', 'recursion'];
+// capitalizeWords(words); // ['I', 'AM', 'LEARNING', 'RECURSION']
+
+
+// reference
+function capitalizeWords (array) {
+    if (array.length === 1) {
+        return [array[0].toUpperCase()];
+    }
+    let res = capitalizeWords(array.slice(0, -1));
+    res.push(array.slice(array.length-1)[0].toUpperCase());
+    return res;
+}
+```
 
 <br></br>
 
 ### stringifyNumbers
 
+객체를 받아 내부의 숫자 형태의 값을 문자열로 변환하여 객체를 반환하는 재귀함수 구현
+
+```JSX
+function stringifyNumbers(obj) {
+    let newObj = {};
+    for (let key in obj) {
+        if (typeof obj[key] === 'number') {
+        	  newObj[key] = obj[key].toString();
+        } else if (typeof obj[key] === 'object' && !Array.isArray(obj[key])) {
+        	  newObj[key] = stringifyNumbers(obj[key]);
+        } else {
+        	  newObj[key] = obj[key];
+        }
+    }
+    return newObj;
+}
+
+/*
+let obj = {
+    num: 1,
+    test: [],
+    data: {
+        val: 4,
+        info: {
+            isRight: true,
+            random: 66
+        }
+    }
+}
+/*
+
+stringifyNumbers(obj)
+
+/*
+{
+    num: "1",
+    test: [],
+    data: {
+        val: "4",
+        info: {
+            isRight: true,
+            random: "66"
+        }
+    }
+}
+*/
+```
+
 <br></br>
 
 ### collectStrings
+
+객체를 받아 문자열의 요소들만 객체에 담아 반환하는 재귀함수 구현
+
+```JSX
+function collectStrings(obj) {
+    let result = [];
+    for (let key in obj) {
+        if (typeof obj[key] === 'string') {
+            result.push(obj[key]);
+        } else if (typeof obj[key] === 'object') {
+        	result = result.concat(collectStrings(obj[key]));
+        }
+    }
+    return result;
+}
+
+const obj = {
+    stuff: "foo",
+    data: {
+        val: {
+            thing: {
+                info: "bar",
+                moreInfo: {
+                    evenMoreInfo: {
+                        weMadeIt: "baz"
+                    }
+                }
+            }
+        }
+    }
+}
+
+collectStrings(obj) // ["foo", "bar", "baz"])
+
+
+// Other: Helper Method Recursion Version
+function collectStrings(obj) {
+    let stringsArr = [];
+
+    function gatherStrings(o) {
+        for (let key in o) {
+            if (typeof o[key] === 'string') {
+                stringsArr.push(o[key]);
+            } else if(typeof o[key] === 'object') {
+                return gatherStrings(o[key]);
+            }
+        }
+    }
+
+    gatherStrings(obj);
+
+    return stringsArr;
+}
+```
