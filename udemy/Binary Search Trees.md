@@ -16,13 +16,26 @@ A data structure that consists of nodes in a parent/child relationship.
 
 ### 트리 구조 용어들
 
-- `Root`: The top node in a tree.
-- `Child`: A node directly connected to another node when moving away from the Root.
-- `Parent`: The converse notion of a child.
-- `Siblings`: A group of nodes with the same parent.
-- `Leaf`: A node with no children.
-- `Edge`: The connection between one node and another.
+- `Root` The top node in a tree.
+- `Child` A node directly connected to another node when moving away from the Root.
+- `Parent` The converse notion of a child.
+- `Siblings` A group of nodes with the same parent.
+- `Leaf` A node with no children.
+- `Edge` The connection between one node and another.
 
 <br></br>
+
+### 트리 구조의 사용
+
+- HTML, DOM
+- Network Routing
+- Abstract Syntax Trees
+- Artificial Intelligence(Mini-Max Tree, Decision Tree)
+- Folders in Operating Systems
+- Computer File Systems
+
+<br></br>
+
+### 트리 구조의 종류
 
 ...
