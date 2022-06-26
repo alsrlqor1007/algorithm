@@ -54,4 +54,44 @@ A data structure that consists of nodes in a parent/child relationship.
 
 ### Searching A Binary Search Tree
 
+- BST 작동 방식
+
+```
+- 모든 부모 노드는 최대 2개의 자식 노드를 가진다.
+- 부모 노드의 좌측 노드는 부모 노드의 값보다 항상 작다.
+- 부모 노드의 우측 노드는 부모 노드의 값보다 항상 크다.
+```
+
+BST는 정렬된 데이터나 정렬이 가능한 데이터에 적용할 수 있다. 순서가 있다면 요소들을 비교할 수 있고 바이너리 트리와 동일하다. 위와 같은 방식으로 BST는 값을 빠르게 탐색할 수 있다.
+
+<br></br>
+
+### Our Tree Classes
+
+```JSX
+class Node {
+    constructor(value) {
+        this.value = value;
+        this.left = null;
+        this.right = null;
+    }
+}
+
+class BinarySearchTree {
+    constructor() {
+        this.root = null;
+    }
+}
+
+var tree = new BinarySearchTree();
+tree.root = new Node(10);
+tree.root.right = new Node(15);
+tree.root.left = new Node(7);
+tree.root.left.right = new Node(9);
+```
+
+<br></br>
+
+### BST: Insert
+
 ...
