@@ -29,7 +29,7 @@ By. Colt Steele, [Udemy Link](https://www.udemy.com/course/js-algorithms-and-dat
 |     19      |              Singly Linked Lists               |                [바로가기](https://github.com/alsrlqor1007/algorithm/blob/main/udemy/Singly%20Linked%20Lists.md)                |
 |     20      |              Doubly Linked Lists               |                                                            바로가기                                                            |
 |     21      |                Stacks + Queues                 |                                                            바로가기                                                            |
-|     22      |              Binary Search Trees               |                                                            바로가기                                                            |
+|     22      |              Binary Search Trees               |                [바로가기](https://github.com/alsrlqor1007/algorithm/blob/main/udemy/Binary%20Search%20Trees.md)                |
 |     23      |                 Tree Traversal                 |                                                            바로가기                                                            |
 |     24      |                  Binary Heaps                  |                                                            바로가기                                                            |
 |     25      |                  Hash Tables                   |                                                            바로가기                                                            |
